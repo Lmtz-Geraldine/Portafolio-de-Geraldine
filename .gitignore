@@ -1,0 +1,32 @@
+# Ignorar archivos de configuración de VS Code
+.vscode/
+.vscode/extensions/
+
+# Ignorar archivos de Node.js si los hubiera
+node_modules/
+package-lock.json
+
+# Ignorar archivos de sistema de Windows y Mac
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas ocultas de Git y logs
+.git/
+logs/
+# 🛑 Ignorar archivos del sistema de Windows
+*.LOG1
+*.LOG2
+*.ini
+NTUSER.DAT*
+Saved Games/
+Searches/
+Videos/
+
+# 🚫 Ignorar archivos de configuración y Node.js
+.vscode/
+node_modules/
+package-lock.json
+
+# 🚀 Ignorar carpetas ocultas de Git y logs
+.git/
+logs/

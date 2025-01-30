@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
+/* 🎨 Paleta de colores */
+:root {
+    --primary-color:  #C9A86A;/* Rojo vino elegante */
+    --secondary-color:  #F5F5DC;/* Dorado sutil */
+    --background-light: #8B0000; /* Beige claro */
+    --background-dark: #2C2C2C; /* Negro grafito */
+    --accent-color: #D3D3D3; /* Gris neutro para contraste */
+}
+
+/* 🌍 Estructura global */
+body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--background-light);
+    color: var(--primary-color);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family:'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 200;
+    font-weight: bold;
+    color: #C9A86A; 
+    text-shadow: 2px 2px 5px #D3D3D3;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Definimos la animación fadeIn para evitar errores */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*SEGUNDA LÍNEA DEL TÍTULO*/
+.subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem; /* Tamaño un poco más grande */
+    font-weight: 300; /* Ligero pero elegante */
+    color: rgba(255, 255, 255, 0.8); /* Blanco semi-transparente */
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3); /* Sombra ligera para mejor contraste */
+    margin-top: 10px;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-in-out; /* Suave animación */
+}
+
+/* Animación para que aparezca de manera fluida */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* 📌 Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 🖼️ Imagen de perfil */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px; /* Ajuste para centrar mejor */
+    position: relative;
+    z-index: 5;
+}
+
+.profile img {
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+/* 🌟 Efecto hover en la imagen */
+.profile img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color:  #D3D3D3; 
+    text-shadow: 2px 2px 5px  #C9A86A;
+}
+
+/* 🔝 Ajuste en la barra de navegación */
+.nav-buttons {
+    position: relative; /* Cambiado de absolute a relative */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espacio entre botones */
+    margin-top: 20px; /* Separa los botones de la parte superior */
+    z-index: 10;
+}
+
+/* Ajuste individual para los botones */
+.nav-button {
+    background-color: white;
+    color: #b22222;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    width: 250px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #ffb19f;
+    transform: scale(1.1);
+}
+
+
+.perfil-profesional {
+    background: #2C2C2C;
+    border-radius: 15px;
+    padding: 20px;
+    width: 70%;
+    max-width: 900px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color:#D3D3D3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2.5s ease-in-out;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🎭 Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ✨ Estilo mejorado para "¡CONÓCEME!" */
+.conoceme {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #F5F5DC;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(133, 105, 40, 0.3);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: pulse 1.5s infinite alternate ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🚀 Efecto hover para hacerlo más interactivo */
+.conoceme:hover {
+    transform: scale(1.1);
+    color: #f3ecb7;
+    text-shadow: 3px 3px 12px rgba(255, 2, 2, 0.4);
+}
+
+/* 🎭 Animación de latido (pulse) */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    to {
+        transform: scale(1.05);
+        text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* 🌟 Secciones generales */
+.section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Sección activa */
+.section.active {
+    display: flex;
+}
+
+/* 🎯 Estilos por sección */
+#skills {
+    background-color: #5f0000;
+    color: white;
+}
+
+/* 🎨 Estilos para la Sección de Experiencia */
+#experience {
+    background-color: #30475e; /* Ajusta según la paleta de colores */
+    padding: 40px 20px; /* Añade espacio alrededor del contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#education {
+    background-color: #9c1e1e; /* Color naranja */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px 20px;
+    text-align: center;
+}
+.titulo-educacion {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+/* 🎓 Contenedor principal de Educación */
+.educacion-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* 🔷 Tarjetas de Educación */
+.educacion-item {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    backdrop-filter: blur(10px); /* Efecto de difuminado */
+}
+
+/* ✨ Efecto Hover */
+.educacion-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 📌 Estilos para los títulos de sub-sección */
+.titulo-subseccion {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* 📌 Detalle de Educación */
+.detalle-educacion {
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+}
+
+/* 📜 Lista de Certificaciones */
+.lista-certificaciones {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.lista-certificaciones li {
+    font-size: 1rem;
+    padding: 8px 0;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+/* 🔗 Estilos para enlaces de certificaciones */
+.lista-certificaciones a {
+    color: #ffeac6; /* Amarillo dorado */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.lista-certificaciones a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* 🌟 Sección de Recomendaciones */
+#recommendations {
+    background-color: #203f5e; /* Azul suave */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px 20px;
+    text-align: center;
+}
+/* 🎖️ Encabezado de la sección */
+.titulo-recomendaciones {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+/* 📩 Estilos del formulario */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* 🎯 Campos del formulario */
+.form-container input, 
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* ✨ Botón del formulario */
+.form-container button {
+    background-color: #3f0b0b; /* Amarillo dorado */
+    color: rgb(255, 205, 187);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #8e1919;
+}
+
+/* 📌 Contenedor de recomendaciones */
+.recomendaciones-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+/* 📜 Tarjeta de recomendación */
+.recomendacion-item {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* ✨ Efecto Hover */
+.recomendacion-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 📜 Nombre y comentario */
+.recomendacion-nombre {
+    font-weight: bold;
+    color: #7205b0;
+}
+
+.recomendacion-texto {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* 🏆 Títulos */
+/* ✨ Estilo mejorado para el título de Experiencia Profesional */
+.titulo-experiencia {
+    font-size: 3rem; /* Tamaño más grande */
+    font-weight: bold;
+    color: rgb(255, 255, 255); /* Asegura que el color sea visible */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Agrega un sombreado para resaltar */
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 10; /* Se asegura de que esté sobre los demás elementos */
+    margin-bottom: 20px; /* Espacio debajo para que no se solape */
+}
+/* 💼 Ajustes para que las cajas de experiencia no cubran el título */
+.experiencia-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+/* 📌 Mejora de las tarjetas de experiencia */
+.experiencia-item {
+    background-color: rgba(165, 197, 226, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    width: 45%;
+    min-width: 320px;
+    box-shadow: 0px 5px 15px rgba(25, 43, 159, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.experiencia-item:hover {
+    transform: scale(1.05);
+}
+
+/* 🎯 Estilo de los títulos dentro de las tarjetas */
+.puesto {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:  #430000; 
+    text-shadow: 2px 2px 5px var(--secondary-color); /* Agrega un efecto elegante */
+}
+
+
+.empresa {
+    font-weight: bold;
+    color: #640404b2;
+}
+
+/* 📝 Estilos de la lista de experiencia */
+.lista-experiencia {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.lista-experiencia li {
+    font-size: 1rem;
+    padding: 5px 0;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgb(54, 25, 25);
+}
+
+.titulo-habilidades {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* ✨ Detalles */
+.habilidades-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* 🔷 Estilos de los cuadros */
+.habilidad-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    min-width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.habilidad-box:hover {
+    transform: scale(1.05);
+}
+
+/* 🏠 Botón de regreso a inicio */
+.home-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--primary-color);
+    color: rgb(255, 128, 128);
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+html {
+    scroll-behavior: smooth;
+}
